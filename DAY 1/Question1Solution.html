@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY1 Assignmemt Solution Question1</title>
+    <h1>Explain and explore the various methods in console.
+    </h1>
+</head>
+<body>
+   <script>
+
+   </script>
+       <p>
+        The console object provides us with several different methods, like :
+         <br>
+        log()<br>
+        error()<br>
+        warn()<br>
+        clear()<br>
+        time() and timeEnd()<br>
+        table()<br>
+        count()<br>
+        group() and groupEnd()<br>
+        custom console logs<br>
+       </p>
+       <h2>Let’s look at all these methods one by one.</h2>
+           <p>
+            <h3>1) console.log() : </h3>
+            Mainly used to log(print) the output to the console. We can put any type inside the log(), be it a string, array, object, boolean etc
+            <br>Example: 
+            <br>console.log() method 
+            <br>console.log('abc');  
+            <br>console.log(1); 
+            <br>console.log(true); 
+            <br>console.log(null); 
+            <br>console.log(undefined);  
+            <br>console.log([1, 2, 3, 4]); // array inside log 
+            <br>console.log({a:1, b:2, c:3}); // object inside log 
+            <br>
+            <h3>2) console.error() : </h3>
+             Used to log error message to the console. Useful in testing of code. By default the error message will be highlighted with red color.
+            <br>Example:
+            <br>console.error() method  
+            <br>console.error('This is a simple error');
+            <br>
+            <h3>3) console.warn() : </h3>
+            <br>Used to log warning message to the console. By default the warning message will be highlighted with yellow color.
+            <br>Example:
+            <br>console.warn() method  
+            <br>console.warn('This is a warning.');  
+            <br>
+            <h3>4) console.clear() : </h3>
+            Used to clear the console. The console will be cleared, in case of Chrome a simple overlayed text will be printed like : ‘Console was cleared’ while in firefox no message is returned.
+            <br>Example:
+            <br>console.clear() method  
+            <br>console.clear();  
+            <br>
+            <h3>5) console.time() and console.timeEnd() :</h3> 
+            Whenever we want to know the amount of time spend by a block or a function, we can make use of the time() and timeEnd() methods provided by the javascript console object. They take a label which must be same, and the code inside can be anything( function, object, simple console).
+            <br>Example:
+            <br>console.time() and console.timeEnd() method  
+            <br>console.time('abc'); 
+            <br>let fun =  function(){ 
+                <br> console.log('fun is running'); 
+                <br> } 
+                <br>let fun2 = function(){ 
+                    <br>console.log('fun2 is running..'); 
+                    <br>} 
+                    <br>fun(); // calling fun(); 
+                    <br>fun2(); // calling fun2(); 
+             <br>
+            <h3>6) console.table() : </h3>
+            This method allows us to generate a table inside a console. The input must be an array or an object which will be shown as a table.
+            <br>Example:
+            <br> console.table() method 
+            <br>console.table({'a':1, 'b':2});  
+            <br>
+            <h3>7) console.count() :</h3> 
+            This method is used to count the number that the function hit by this counting method.
+            <br>Example:
+            <br>console.count() method 
+            <br>for(let i=0;i<5;i++){ 
+                <br>console.count(i); 
+                <br>} 
+             <br>
+            <h3>8) console.group() and console.groupEnd() :</h3>
+            group() and groupEnd() methods of the console object allows us to group contents in a separate block, which will be indented. Just like the time() and the timeEnd() they also accepts label, again of same value.
+            <br>Example:
+            <br>// console.group() and console.groupEnd() method 
+            <br>console.group('simple'); 
+            <br>console.warn('warning!'); 
+            <br>console.error('error here'); 
+            <br>console.log('vivi vini vici'); 
+            <br>console.groupEnd('simple'); 
+            <br>console.log('new section'); 
+            <br>
+            <h3>9) Custom Console Logs :</h3>
+            User can add Styling to the console logs in order to make logs Custom . 
+            <br>The Syntax for it is to add the css styling as a parameter to the logs which will replace %c in the logs as shown in the example below .
+            <br>
+            Example:
+            <br>
+             Custom Console log example<br> 
+              const spacing = '10px'; <br>
+              const styles =  <br>
+                    `padding: ${spacing}; background-color: white; color: green; font-style: <br> 
+                     italic; border: 1px solid black; font-size: 2em;`; <br>
+              console.log('%cI Love FCS', styles);<br>
+              <br>
+           </p>
+    
+</body>
+</html>
