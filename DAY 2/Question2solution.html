@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 2 Assignmet Question2 Solution</title>
+    <h1>Explain with examples remaining methods of strings and array.
+    </h1>
+    <h2>Strings :</h2>
+    
+</head>
+<body>
+<p> 
+ <h3> 1) charAt(index) Method :</h3>
+ The JavaScript String charAt() method returns the character at the given index.
+ <br>Example: 
+ <br>var str="javascript";  
+ <br>document.write(str.charAt(2));  
+ <br>
+ <h3>2) concat(str) Method :</h3> 
+ The JavaScript String concat(str) method concatenates or joins two strings.
+ <br>Example: 
+ <br>var s1="javascript ";  
+ <br>var s2="concat example";  
+ <br>var s3=s1.concat(s2);  
+ <br>document.write(s3);  
+ <br>
+ <h3>3) indexOf(str) Method :</h3>
+ The JavaScript String indexOf(str) method returns the index position of the given string.
+ <br>Example:  
+ <br>var s1="javascript from javatpoint indexof";  
+ <br>var n=s1.indexOf("from");  
+ <br>document.write(n);  
+ <br>
+ <h3>4) lastIndexOf(str) Method :</h3>
+ The JavaScript String lastIndexOf(str) method returns the last index position of the given string.
+ <br>Example:
+ <br>var s1="javascript from javatpoint indexof";  
+ <br>var n=s1.lastIndexOf("java");  
+ <br>document.write(n);  
+ <br>
+ <h3>5) JavaScript String toLowerCase() Method :</h3>
+The JavaScript String toLowerCase() method returns the given string in lowercase letters.
+<br>Example:
+<br>var s1="JavaScript toLowerCase Example";  
+<br>var s2=s1.toLowerCase();  
+<br>document.write(s2);  
+<h3>6) JavaScript String toUpperCase() Method :</h3>
+The JavaScript String toUpperCase() method returns the given string in uppercase letters.
+<br>Example:
+<br>var s1="JavaScript toUpperCase Example";  
+<br>var s2=s1.toUpperCase();  
+<br>document.write(s2);  
+
+<h3>7) JavaScript String slice(beginIndex, endIndex) Method :</h3>
+The JavaScript String slice(beginIndex, endIndex) method returns the parts of string from given beginIndex to endIndex. In slice() method, beginIndex is inclusive and endIndex is exclusive.
+<br>Example:
+<br>var s1="abcdefgh";  
+<br>var s2=s1.slice(2,5);  
+<br>document.write(s2);  
+<h3>8) JavaScript String trim() Method :</h3>
+The JavaScript String trim() method removes leading and trailing whitespaces from the string.
+<br>Example:
+<br>var s1="     javascript trim    ";  
+<br>var s2=s1.trim();  
+<br>document.write(s2);  
+
+<h3>9) JavaScript String split() Method :</h3>
+Example: 
+<br>var str="This is JavaTpoint website";  
+<br>document.write(str.split(" ")); //splits the given string
+</p>
+     <p>
+         <h2>Arrays:
+         </h2>
+        <h3>1) Array.push() : Adding Element at the end of an Array. </h3>
+         As array in JavaScript are mutable object, we can easily add or remove elements from the Array.
+         <br>And it dynamically changes as we modify the elements from the array.
+         <br>// Adding elements at the end of an array 
+         <br>// Declaring and initializing arrays 
+         <br>var number_arr = [ 10, 20, 30, 40, 50 ]; 
+         <br>var string_arr = [ "piyush", "gourav", "smruti", "ritu" ]; 
+  <br>
+         <br>// push() 
+         <br>// number_arr contains [10, 20, 30, 40, 50, 60] 
+         <br>number_arr.push(60); 
+  
+         <br>// We can pass multiple parameters to the push() 
+         <br>// number_arr contains 
+         <br>// [10, 20, 30, 40, 50, 60, 70, 80, 90] 
+         <br>number_arr.push(70, 80, 90); 
+         <br>
+         <br>// string_arr contains 
+         <br>// ["piyush", "gourav", "smruti", "ritu", "sumit", "amit"]; 
+         <br>string_arr.push("sumit", "amit"); 
+         <br>
+         <br>// Printing both the array after performing push operation 
+         <br>console.log("After push op " + number_arr); 
+         <br>console.log("After push op " + string_arr); 
+         <br>
+         <h3>2)Array.unshift() : Adding elements at the front of an Array</h3>
+         Syntax :
+         <br>Array.unshift(item1, item2 …)
+         <br>Parameters: Items to be added to the array
+         <br>Description: This method is used to add elements at the beginning of an array.
+         <br>Example:
+         <br>// Adding element at the beginning of an array 
+         <br>// Declaring and initializing arrays 
+         <br>var number_arr = [ 20, 30, 40 ]; 
+         <br>var string_arr = [ "amit", "sumit" ]; 
+         <br>
+         <br>// unshift() 
+         <br>// number_arr contains 
+         <br>// [10, 20, 20, 30, 40] 
+         <br>number_arr.unshift(10, 20); 
+         <br>
+         <br>// string_arr contains 
+         <br>// ["sunil", "anil", "amit", "sumit"] 
+         <br>string_arr.unshift("sunil", "anil"); 
+         <br>
+         <br>// Printing both the array after performing unshift operation 
+         <br>console.log("After unshift op " + number_arr); 
+         <br>console.log("After unshift op " + string_arr);
+         <br> 
+         <h3> 3) Array.pop() : Removing elements from the end of an array</h3> 
+         Syntax:
+         <br>Array.pop()
+         <br>Parameters: It takes no parameter
+         <br>Description: It is used to remove array elements from the end of an array.
+         <br>
+         <br>// Removing elements from the end of an array 
+         <br>// Declaring and initializing arrays 
+         <br>var number_arr = [ 20, 30, 40, 50 ]; 
+         <br>var string_arr = [ "amit", "sumit", "anil" ]; 
+         <br>
+         <br>// pop() 
+         <br>// number_arr contains 
+         <br>// [ 20, 30, 40 ] 
+         <br>number_arr.pop(); 
+         <br>
+         <br>// string_arr contains 
+         <br>// ["amit", "sumit"] 
+         <br>string_arr.pop(); 
+         <br>
+         <br>// Printing both the array after performing pop operation 
+         <br>console.log("After pop op " + number_arr); 
+         <br>console.log("After popo op " + string_arr); 
+         <br>
+         <h3>4)Array.shift() :Removing elements at the beginning of an array </h3>
+         Syntax :
+        <br>Array.shift()
+        <br>Parameter : it takes no parameter
+<br>Description : It is used to remove array at the beginning of an array.
+<br>Example:
+<br>// Removing element from the beginning of an array 
+<br>// Declaring and initializing arrays 
+<br>var number_arr = [ 20, 30, 40, 50, 60 ]; 
+<br>var string_arr = [ "amit", "sumit", "anil", "prateek" ]; 
+<br>
+<br>// shift() 
+<br>// number_arr contains 
+<br>//  [30, 40, 50, 60]; 
+<br>number_arr.shift(); 
+<br>
+<br>// string_arr contains 
+<br>// ["sumit", "anil", "prateek"] 
+<br>string_arr.shift(); 
+<br>
+<br>// Printing both the array after performing shifts operation 
+<br>console.log("After shift op " + number_arr); 
+<br>console.log("After shift op " + string_arr);
+<br>
+<h3>5)Array.splice() :Insertion and Removal in between an Array</h3>
+ Syntax:
+ <br>Array.splice (start, deleteCount, item 1, item 2….) 
+ <br>Parameters:  
+ <br>Start : Location at which to perform operation
+ <br>deleteCount: Number of element to be deleted, 
+ <br>if no element is to be deleted pass 0.
+ <br>Item1, item2 …..- this is an optional parameter . 
+ <br>These are the elements to be inserted from location start 
+<br>Description: Splice is very useful method as it can remove and add elements from the particular location.
+<br>Example:
+<br>// Removing an adding element at a particular location 
+<br>// in an array 
+<br>// Declaring and initializing arrays 
+<br>var number_arr = [ 20, 30, 40, 50, 60 ]; 
+<br>var string_arr = [ "amit", "sumit", "anil", "prateek" ]; 
+<br>
+<br>// splice() 
+<br>// deletes 3 elements starting from 1 
+<br>// number array contains [20, 60] 
+<br>number_arr.splice(1, 3); 
+<br>
+<br>// doesn't delete but inserts 3, 4, 5 
+<br>// at starting location 1 
+<br>number_arr.splice(1, 0, 3, 4, 5); 
+<br>
+<br>// deletes two elements starting from index 1 
+<br>// and add three elements. 
+<br>// It contains  ["amit", "xyz", "geek 1", "geek 2", "prateek"]; 
+<br>string_arr.splice(1, 2, "xyz", "geek 1", "geek 2"); 
+<br>
+<br>// Printing both the array after performing splice operation 
+<br>console.log("After splice op " + number_arr); 
+<br>console.log("After splice op " + string_arr); 
+     </p>
+</body>
+</html>
