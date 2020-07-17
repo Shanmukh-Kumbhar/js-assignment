@@ -1,0 +1,76 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 3 Assignmet Question3 Solution</title>
+    <h2>
+        Write a program to take marks as input from the user and grade them accordingly.Use condtional statements.Also the same code using switch or ternary.
+    
+    </h2>
+</head>
+<body>
+    <script>
+        let marks = prompt("Enter your marks.");
+           
+        
+            let grade;
+            if(+marks > 90){
+                grade = "A+";
+            }else if(+marks > 80){
+                grade = "A";
+            }else if(+marks > 70){
+                grade = "B+";
+            }else if(+marks > 60){
+                grade = "C";
+            }else if(+marks > 50){
+                grade = "D";
+            }else if(+marks > 40){
+                grade = "E";
+            }else if(+marks > 0)
+                grade = "Fail";
+            else{
+                grade = "Incorrect marks."
+            }
+            console.log('Using Conditional statement');
+
+        console.log(`Marks are ${marks} and grade is ${grade}.`); 
+console.log(`Using switch case `);
+
+        // By Using Switch case //
+
+       switch(true){
+            case (+marks > 80) :
+                grade = "A";
+                break;
+            case (+marks > 70) :
+                grade = "B";
+                break;
+            case (+marks > 60) :
+                grade = "C";
+                break;
+            case (+marks > 50) :
+                grade = "D";
+                break;
+            case (+marks > 40) : 
+                grade = "E";
+                break;
+            case (+marks > 0) :
+                grade = "Fail";
+                break;
+            default:
+                grade = "Incorrect value."
+        }
+        console.log(`Marks are ${marks} and grade is ${grade}.`); 
+        
+        // By Using ternary operator. //
+
+        grade = (+marks > 80) ? "A" : (+marks > 70) ? "B" : (+marks > 60) ? "C": (+marks > 50) ? "D" : (+marks > 40) ? "E" : "Fail" ;
+        console.log(`Using Ternary Operator `);
+
+        console.log(`Marks are ${marks} and grade is ${grade}.`); 
+
+    </script>
+</body>
+</html>
