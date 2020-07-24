@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 5 Assignment Question 2 Solution.</title>
+    <h2>
+        Create a Class User with properties as name, age & email. 
+He can login and logout 
+Create another class Moderator which has all the features of User, plus additional functionality to Add coins and remove coins. 
+Create one more class Admin which has all the features of Moderator plus additional features like add a Course and delete a particular course for a user. 
+    </h2>
+</head>
+<body>
+    <script>
+    class User {
+        constructor(name,age,email){
+            this.name = name;
+            this.age = age;
+            this.email = email;
+            this.luCoins=0;
+            this.courses = [];
+          
+        }
+          login(){
+              console.log(`${name} has logged in`);
+              return this;
+          }
+          logout(){
+              console.log(`${name} has logged out`);
+              return this;
+          }
+          getDetails(){
+        console.log(`Name is ${this.name}, email is ${this.email}`);
+        return this;
+    }
+    
+    }
+    class Moderator extends User{
+        /*constructor(name,age,email){
+        super(name,age,email);
+        this.luCoins=0;
+        }*/
+        addCoins(){
+        this.luCoins++;
+        console.log(`${this.name} has ${this.luCoins} coins`);
+        return this;
+        }
+        deleteCoins(){
+            this.luCoins--;
+          //  addCoins.pop;
+            console.log(`${this.name} has ${this.luCoins} coins`);
+            return this;
+
+        }
+
+    }
+    class Admin extends Moderator{
+       addCourses(user,course){
+       user.courses.push(course);
+       console.log(user);
+       return this;
+       }
+       deleteCourses(user,course) { 
+           user.courses.pop(course);
+           console.log(user);
+           return this;
+       }
+   }
+
+
+
+let user1= new User();
+let user2 = new User('shan',25,'shan@gmail.com')
+user1 = new Moderator('Bharat',24,'bharat@gmail.com');
+let admin = new Admin('Dynanesh',25,'dynanesh@gmail.com')
+let users = [user1,admin];
+
+
+user1.login().addCoins().addCoins().deleteCoins().getDetails();
+admin.addCourses(user2,'Python').getDetails();
+</script>
+</body>
+</html>
